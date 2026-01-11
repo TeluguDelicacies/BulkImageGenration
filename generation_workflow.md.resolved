@@ -1,0 +1,90 @@
+# Product Image Generation Workflow
+
+To ensure consistent results and make it easy for you to request multiple images at once, please follow this simple format.
+
+## 1. File Naming
+Rename your label image files to match the product name. Avoid spaces or special characters; use underscores `_` or hyphens `-`.
+
+*   **Good**: `sambar_premix_label.png`, `avisaginjala_kaaram.jpg`
+*   **Bad**: `IMG_2024.jpg`, `label final v2.png`
+
+## 2. The Input File (Manifest)
+Create a single text file (e.g., `products_to_gen.txt` or `manifest.json`) that lists the details for each product.
+
+### Simple Text Format
+```
+Product: Sambar Premix
+Label File: sambar_premix_label.png
+Bottle Type: PET
+Hex Code: #FFD699
+Texture: fine powder
+
+Product: Avisaginjala Kaaram
+Label File: avisaginjala_kaaram.jpg
+Bottle Type: Glass
+Hex Code: #7C5D37
+Texture: coarse granular spice mix
+```
+
+### JSON Format (Recommended)
+```json
+[
+  {
+    "product_name": "Sambar Premix",
+    "label_file": "sambar_premix_label.png",
+    "bottle_type": "PET",
+    "content_hex_code": "#FFD699",
+    "texture": "fine powder"
+  },
+  {
+    "product_name": "Avisaginjala Kaaram",
+    "label_file": "avisaginjala_kaaram.jpg",
+    "bottle_type": "Glass",
+    "content_hex_code": "#7C5D37",
+    "texture": "coarse granular spice mix"
+  }
+]
+```
+
+## 3. Validated Prompts (The "Secret Sauce")
+
+These are the exact internal prompts I will use.
+
+### PET Bottle Prompt
+> **Variables**: `[HEX_CODE]`, `[TEXTURE]`, `[LABEL_IMAGE_REFERENCE]`
+
+```text
+A photorealistic professional product photograph of a single tall, cylindrical clear PET plastic jar (proportions roughly 1.7:1 height to width) with a bright yellow opaque plastic screw-on lid, sitting centered on a clean white surface against a solid dark blue studio background.
+
+The jar is filled with [TEXTURE] that has an approximate color matching hex code [HEX_CODE].
+
+Affixed centrally onto the curved front plastic surface is the exact label shown in [LABEL_IMAGE_REFERENCE].
+
+CRITICAL INSTRUCTION: The label is a horizontal strip (50mm tall) that is significantly shorter than the jar (160mm tall). There must be substantial visible space of clear plastic and powder both above and below the label. The label sits in the vertical center of the jar.
+
+CRITICAL WRAPPING: The label must wrap realistically around the cylinder. ONLY the central 40% of the label design (the main logo/title) should be visible on the front face. The left and right sides (nutrition facts, side text) MUST curve away and disappear from view. Do not squeeze the entire label onto the front face.
+
+The lighting is professional studio softbox lighting from the top-left, creating a vertical specular highlight along the length of the cylindrical jar to emphasize its roundness. Eye-level view. Square aspect ratio.
+
+A rectangular matte paper label referenced from [LABEL_IMAGE_REFERENCE] is applied to the front face.
+
+Front Face: The label covers about 40% of the jar's circumference. It is clearly visible on the front face, but the edges curve slightly away from the camera. It does not wrap all the way around the sides.
+Curvature: The left and right edges of the label follow the cylinder's curve naturally.
+```
+
+### Glass Bottle Prompt
+> **Variables**: `[HEX_CODE]`, `[TEXTURE]`, `[LABEL_IMAGE_REFERENCE]`
+
+```text
+A photorealistic professional product photograph of a single square clear glass jar with rounded corners and a highly reflective gold metal lid, sitting centered on a clean white surface against a solid dark blue studio background.
+
+The jar is filled with [TEXTURE] that has an approximate color matching hex code [HEX_CODE].
+
+Affixed flat and centrally onto the front glass surface is the exact label shown in [LABEL_IMAGE_REFERENCE].
+
+CRITICAL WRAPPING: The glass jar is square with rounded corners. The label is applied across the flat front face and wraps around the corners. ONLY the central main design (Logo, Name) is visible on the flat front face. The side panels (Nutrition, Ingredients) MUST wrap around the 90-degree corners and disappear/be foreshortened. Do not squeeze the full label onto the front face.
+
+The lighting is professional studio softbox lighting from the top-left, creating realistic reflections on the gold lid and distinct highlights along the edges of the thick glass jar. Eye-level view. Square aspect ratio.
+
+A rectangular matte paper label referenced from [LABEL_IMAGE_REFERENCE] is stuck to the front face.
+```

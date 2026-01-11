@@ -1,0 +1,23 @@
+[
+    {
+        "product_name": "Sambar Premix",
+        "label_file": "Sambar Premix.png",
+        "bottle_type": "PET",
+        "content_hex_code": "ffe0b3",
+        "texture": "fine powder"
+    },
+    {
+        "product_name": "Chutney Premix",
+        "label_file": "Chutney Premix.png",
+        "bottle_type": "PET",
+        "content_hex_code": "846830",
+        "texture": "chunky corse grain, with speks of green chilly sparcly spread around powder"
+    },
+    {
+        "product_name": "MUltigrain Mix",
+        "label_file": "MUltigrain Mix.png",
+        "bottle_type": "PET",
+        "content_hex_code": "ffd699",
+        "texture": "fine powder"
+    }
+]

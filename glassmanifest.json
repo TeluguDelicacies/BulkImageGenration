@@ -1,0 +1,93 @@
+[
+    {
+        "product_name": "Avisaginjala Kaaram",
+        "label_file": "Avisaginjala Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#993300",
+        "texture": "fine granular powder"
+    },
+    {
+        "product_name": "Nalla Kaaram",
+        "label_file": "Nalla Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#66210b",
+        "texture": "fine caorse granular powder"
+    },
+    {
+        "product_name": "Godhuma Kaaram",
+        "label_file": "Godhuma Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#B8833D",
+        "texture": "fine powder with black specks sparcly spread around"
+    },
+    {
+        "product_name": "Dosa Kaaram",
+        "label_file": "Dosa Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#EFCCA2",
+        "texture": "fine powder"
+    },
+    {
+        "product_name": "Kandi Podi",
+        "label_file": "Kandi Podi.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#ffc266",
+        "texture": "fine powder"
+    },
+    {
+        "product_name": "Idli Podi",
+        "label_file": "Idli Podi.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#EFCCA2",
+        "texture": "fine granular powder"
+    },
+    {
+        "product_name": "Moringa Kaaram",
+        "label_file": "Moringa Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#85792F",
+        "texture": "fine powder"
+    },
+    {
+        "product_name": "Velluli Kaaram",
+        "label_file": "Velluli Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#992600",
+        "texture": "fibrus powder with specks of red sparcly scattered"
+    },
+    {
+        "product_name": "Kadapa Kaaram",
+        "label_file": "Kadapa Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#992600",
+        "texture": "fibrus powder with specks of red and white sparcly scattered"
+    },
+    {
+        "product_name": "Pudina Kaaram",
+        "label_file": "Pudina Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#994d00",
+        "texture": "fibrus powder with specks of green scattered very sparcly"
+    },
+    {
+        "product_name": "Karivepaku Podi",
+        "label_file": "Karivepaku Podi.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#7d4a2a",
+        "texture": "fibrus powder with small stems(curry leaf), scattered sparcly"
+    },
+    {
+        "product_name": "Special Palli Kaaram",
+        "label_file": "Special Palli Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#e69900",
+        "texture": "fine powder"
+    },
+    {
+        "product_name": "Palli Kaaram",
+        "label_file": "Palli Kaaram.png",
+        "bottle_type": "Glass",
+        "content_hex_code": "#b35900",
+        "texture": "coarse and a little chunky"
+    }
+]
